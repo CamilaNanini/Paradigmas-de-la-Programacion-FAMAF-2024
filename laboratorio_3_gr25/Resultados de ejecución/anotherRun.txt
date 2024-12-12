@@ -1,0 +1,441 @@
+sh runall.sh        // NOTA: Este script lo único que hace es limpiar, setear la cantidad de workers, compilar, correr el programa y
+                    // guardar la líneas del stdout de make en otro archivo llamado "anotherRunStdouts.txt".
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/sbin/stop-master.sh
+stopping org.apache.spark.deploy.master.Master
+make[1]: se entra en el directorio '/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024'
+WARNING:        Si la variable SPARK_WORKER_INSTANCES fue editada antes de detener los workers
+                no se detendran todos, y spark perdera la referencia de los workers que estaban corriendo.
+                En caso que suceda lo segundo ejecute 'pkill -f org.apache.spark.deploy.worker.Worker' manualmente.
+
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/sbin/stop-worker.sh spark://yun-yun:7077
+stopping org.apache.spark.deploy.worker.Worker
+no org.apache.spark.deploy.worker.Worker to stop
+no org.apache.spark.deploy.worker.Worker to stop
+no org.apache.spark.deploy.worker.Worker to stop
+make[1]: se sale del directorio '/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024'
+/home/yun/Documentos/3ro/Paradigmas/apache-maven-3.9.8/bin/mvn clean -q
+24/06/20 19:57:57 INFO SparkContext: Running Spark version 3.5.1
+24/06/20 19:57:57 INFO SparkContext: OS info Linux, 6.9.3-3-MANJARO, amd64
+24/06/20 19:57:57 INFO SparkContext: Java version 1.8.0_412
+24/06/20 19:57:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/06/20 19:57:57 INFO ResourceUtils: ==============================================================
+24/06/20 19:57:57 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/06/20 19:57:57 INFO ResourceUtils: ==============================================================
+24/06/20 19:57:57 INFO SparkContext: Submitted application: JavaCalculateNamedEntities
+24/06/20 19:57:57 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/06/20 19:57:57 INFO ResourceProfile: Limiting resource is cpu
+24/06/20 19:57:57 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/06/20 19:57:57 INFO SecurityManager: Changing view acls to: yun
+24/06/20 19:57:57 INFO SecurityManager: Changing modify acls to: yun
+24/06/20 19:57:57 INFO SecurityManager: Changing view acls groups to: 
+24/06/20 19:57:57 INFO SecurityManager: Changing modify acls groups to: 
+24/06/20 19:57:57 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: yun; groups with view permissions: EMPTY; users with modify permissions: yun; groups with modify permissions: EMPTY
+24/06/20 19:57:57 INFO Utils: Successfully started service 'sparkDriver' on port 40959.
+24/06/20 19:57:57 INFO SparkEnv: Registering MapOutputTracker
+24/06/20 19:57:57 INFO SparkEnv: Registering BlockManagerMaster
+24/06/20 19:57:57 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/06/20 19:57:57 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/06/20 19:57:57 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/06/20 19:57:57 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-7661abbe-0620-4b71-a9ea-f65154449fab
+24/06/20 19:57:57 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+24/06/20 19:57:57 INFO SparkEnv: Registering OutputCommitCoordinator
+24/06/20 19:57:57 INFO JettyUtils: Start Jetty 127.0.1.1:4040 for SparkUI
+24/06/20 19:57:57 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/06/20 19:57:57 INFO SparkContext: Added JAR file:/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/target/mi-proyecto-1.0.0.jar at spark://yun-yun:40959/jars/mi-proyecto-1.0.0.jar with timestamp 1718924277116
+24/06/20 19:57:57 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://127.0.1.1:7077...
+24/06/20 19:57:58 INFO TransportClientFactory: Successfully created connection to /127.0.1.1:7077 after 24 ms (0 ms spent in bootstraps)
+24/06/20 19:57:58 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20240620195758-0000
+24/06/20 19:57:58 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42307.
+24/06/20 19:57:58 INFO NettyBlockTransferService: Server created on yun-yun:42307
+24/06/20 19:57:58 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/06/20 19:57:58 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240620195758-0000/0 on worker-20240620195752-127.0.1.1-32803 (127.0.1.1:32803) with 1 core(s)
+24/06/20 19:57:58 INFO StandaloneSchedulerBackend: Granted executor ID app-20240620195758-0000/0 on hostPort 127.0.1.1:32803 with 1 core(s), 1024.0 MiB RAM
+24/06/20 19:57:58 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, yun-yun, 42307, None)
+24/06/20 19:57:58 INFO BlockManagerMasterEndpoint: Registering block manager yun-yun:42307 with 366.3 MiB RAM, BlockManagerId(driver, yun-yun, 42307, None)
+24/06/20 19:57:58 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, yun-yun, 42307, None)
+24/06/20 19:57:58 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, yun-yun, 42307, None)
+24/06/20 19:57:58 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240620195758-0000/0 is now RUNNING
+24/06/20 19:57:58 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+24/06/20 19:57:58 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/06/20 19:57:58 INFO SharedState: Warehouse path is 'file:/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/spark-warehouse'.
+24/06/20 19:57:59 INFO InMemoryFileIndex: It took 37 ms to list leaf files for 1 paths.
+24/06/20 19:58:00 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (127.0.0.1:57116) with ID 0,  ResourceProfileId 0
+24/06/20 19:58:00 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.1.1:34597 with 366.3 MiB RAM, BlockManagerId(0, 127.0.1.1, 34597, None)
+24/06/20 19:58:01 INFO FileSourceStrategy: Pushed Filters: 
+24/06/20 19:58:01 INFO FileSourceStrategy: Post-Scan Filters: 
+24/06/20 19:58:02 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 350.2 KiB, free 366.0 MiB)
+24/06/20 19:58:02 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 365.9 MiB)
+24/06/20 19:58:02 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on yun-yun:42307 (size: 34.4 KiB, free: 366.3 MiB)
+24/06/20 19:58:02 INFO SparkContext: Created broadcast 0 from javaRDD at App.java:100
+24/06/20 19:58:02 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+24/06/20 19:58:02 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 34.7 KiB, free 365.9 MiB)
+24/06/20 19:58:02 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.3 KiB, free 365.9 MiB)
+24/06/20 19:58:02 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on yun-yun:42307 (size: 2.3 KiB, free: 366.3 MiB)
+24/06/20 19:58:02 INFO SparkContext: Created broadcast 1 from broadcast at Classifier.java:26
+24/06/20 19:58:02 INFO SparkContext: Starting job: collect at Classifier.java:39
+24/06/20 19:58:02 INFO DAGScheduler: Got job 0 (collect at Classifier.java:39) with 13 output partitions
+24/06/20 19:58:02 INFO DAGScheduler: Final stage: ResultStage 0 (collect at Classifier.java:39)
+24/06/20 19:58:02 INFO DAGScheduler: Parents of final stage: List()
+24/06/20 19:58:02 INFO DAGScheduler: Missing parents: List()
+24/06/20 19:58:02 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[7] at filter at Classifier.java:38), which has no missing parents
+24/06/20 19:58:02 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 25.1 KiB, free 365.9 MiB)
+24/06/20 19:58:02 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 11.4 KiB, free 365.9 MiB)
+24/06/20 19:58:02 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on yun-yun:42307 (size: 11.4 KiB, free: 366.3 MiB)
+24/06/20 19:58:02 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+24/06/20 19:58:02 INFO DAGScheduler: Submitting 13 missing tasks from ResultStage 0 (MapPartitionsRDD[7] at filter at Classifier.java:38) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+24/06/20 19:58:02 INFO TaskSchedulerImpl: Adding task set 0.0 with 13 tasks resource profile 0
+24/06/20 19:58:02 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (127.0.1.1, executor 0, partition 0, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 19:58:02 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 127.0.1.1:34597 (size: 11.4 KiB, free: 366.3 MiB)
+24/06/20 19:58:03 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.1.1:34597 (size: 34.4 KiB, free: 366.3 MiB)
+24/06/20 19:58:03 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 127.0.1.1:34597 (size: 2.3 KiB, free: 366.3 MiB)
+24/06/20 19:58:34 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (127.0.1.1, executor 0, partition 1, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 19:58:34 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 31818 ms on 127.0.1.1 (executor 0) (1/13)
+24/06/20 19:59:08 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (127.0.1.1, executor 0, partition 2, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 19:59:09 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 34941 ms on 127.0.1.1 (executor 0) (2/13)
+24/06/20 19:59:43 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (127.0.1.1, executor 0, partition 3, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 19:59:43 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 34518 ms on 127.0.1.1 (executor 0) (3/13)
+24/06/20 20:00:19 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (127.0.1.1, executor 0, partition 4, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:00:19 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 36086 ms on 127.0.1.1 (executor 0) (4/13)
+24/06/20 20:00:55 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (127.0.1.1, executor 0, partition 5, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:00:55 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 35966 ms on 127.0.1.1 (executor 0) (5/13)
+24/06/20 20:01:31 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (127.0.1.1, executor 0, partition 6, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:01:31 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 36183 ms on 127.0.1.1 (executor 0) (6/13)
+24/06/20 20:02:09 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (127.0.1.1, executor 0, partition 7, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:02:09 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 37361 ms on 127.0.1.1 (executor 0) (7/13)
+24/06/20 20:02:47 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (127.0.1.1, executor 0, partition 8, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:02:47 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 38352 ms on 127.0.1.1 (executor 0) (8/13)
+24/06/20 20:03:25 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (127.0.1.1, executor 0, partition 9, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:03:25 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 38018 ms on 127.0.1.1 (executor 0) (9/13)
+24/06/20 20:04:04 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (127.0.1.1, executor 0, partition 10, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:04:04 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 38973 ms on 127.0.1.1 (executor 0) (10/13)
+24/06/20 20:04:43 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (127.0.1.1, executor 0, partition 11, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:04:43 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 38709 ms on 127.0.1.1 (executor 0) (11/13)
+24/06/20 20:05:22 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (127.0.1.1, executor 0, partition 12, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:05:22 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 38938 ms on 127.0.1.1 (executor 0) (12/13)
+24/06/20 20:05:43 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 21315 ms on 127.0.1.1 (executor 0) (13/13)
+24/06/20 20:05:43 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/06/20 20:05:43 INFO DAGScheduler: ResultStage 0 (collect at Classifier.java:39) finished in 461,170 s
+24/06/20 20:05:43 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/06/20 20:05:43 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/06/20 20:05:43 INFO DAGScheduler: Job 0 finished: collect at Classifier.java:39, took 461,204906 s
+24/06/20 20:05:43 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/06/20 20:05:43 INFO SparkUI: Stopped Spark web UI at http://yun-yun:4040
+24/06/20 20:05:43 INFO StandaloneSchedulerBackend: Shutting down all executors
+24/06/20 20:05:43 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down
+24/06/20 20:05:43 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/06/20 20:05:43 INFO MemoryStore: MemoryStore cleared
+24/06/20 20:05:43 INFO BlockManager: BlockManager stopped
+24/06/20 20:05:43 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/06/20 20:05:43 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/06/20 20:05:43 INFO SparkContext: Successfully stopped SparkContext
+24/06/20 20:05:43 INFO ShutdownHookManager: Shutdown hook called
+24/06/20 20:05:43 INFO ShutdownHookManager: Deleting directory /tmp/spark-fa3ff86d-2f58-442c-a47f-cfb5b5d05c78
+24/06/20 20:05:43 INFO ShutdownHookManager: Deleting directory /tmp/spark-119ad969-8973-4f96-a2df-bc5383897669
+
+real    7m57,439s
+user    0m27,748s
+sys     0m2,513s
+
+
+
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/sbin/stop-master.sh
+stopping org.apache.spark.deploy.master.Master
+make[1]: se entra en el directorio '/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024'
+WARNING:        Si la variable SPARK_WORKER_INSTANCES fue editada antes de detener los workers
+                no se detendran todos, y spark perdera la referencia de los workers que estaban corriendo.
+                En caso que suceda lo segundo ejecute 'pkill -f org.apache.spark.deploy.worker.Worker' manualmente.
+
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/sbin/stop-worker.sh spark://yun-yun:7077
+stopping org.apache.spark.deploy.worker.Worker
+make[1]: se sale del directorio '/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024'
+/home/yun/Documentos/3ro/Paradigmas/apache-maven-3.9.8/bin/mvn clean -q
+24/06/20 20:05:58 INFO SparkContext: Running Spark version 3.5.1
+24/06/20 20:05:58 INFO SparkContext: OS info Linux, 6.9.3-3-MANJARO, amd64
+24/06/20 20:05:58 INFO SparkContext: Java version 1.8.0_412
+24/06/20 20:05:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/06/20 20:05:58 INFO ResourceUtils: ==============================================================
+24/06/20 20:05:58 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/06/20 20:05:58 INFO ResourceUtils: ==============================================================
+24/06/20 20:05:58 INFO SparkContext: Submitted application: JavaCalculateNamedEntities
+24/06/20 20:05:58 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/06/20 20:05:58 INFO ResourceProfile: Limiting resource is cpu
+24/06/20 20:05:58 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/06/20 20:05:58 INFO SecurityManager: Changing view acls to: yun
+24/06/20 20:05:58 INFO SecurityManager: Changing modify acls to: yun
+24/06/20 20:05:58 INFO SecurityManager: Changing view acls groups to: 
+24/06/20 20:05:58 INFO SecurityManager: Changing modify acls groups to: 
+24/06/20 20:05:58 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: yun; groups with view permissions: EMPTY; users with modify permissions: yun; groups with modify permissions: EMPTY
+24/06/20 20:05:58 INFO Utils: Successfully started service 'sparkDriver' on port 45771.
+24/06/20 20:05:58 INFO SparkEnv: Registering MapOutputTracker
+24/06/20 20:05:59 INFO SparkEnv: Registering BlockManagerMaster
+24/06/20 20:05:59 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/06/20 20:05:59 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/06/20 20:05:59 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/06/20 20:05:59 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-3a03890b-3089-4a62-8f22-f4b6e1caee44
+24/06/20 20:05:59 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+24/06/20 20:05:59 INFO SparkEnv: Registering OutputCommitCoordinator
+24/06/20 20:05:59 INFO JettyUtils: Start Jetty 127.0.1.1:4040 for SparkUI
+24/06/20 20:05:59 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/06/20 20:05:59 INFO SparkContext: Added JAR file:/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/target/mi-proyecto-1.0.0.jar at spark://yun-yun:45771/jars/mi-proyecto-1.0.0.jar with timestamp 1718924758618
+24/06/20 20:05:59 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://127.0.1.1:7077...
+24/06/20 20:05:59 INFO TransportClientFactory: Successfully created connection to /127.0.1.1:7077 after 23 ms (0 ms spent in bootstraps)
+24/06/20 20:05:59 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20240620200559-0000
+24/06/20 20:05:59 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35485.
+24/06/20 20:05:59 INFO NettyBlockTransferService: Server created on yun-yun:35485
+24/06/20 20:05:59 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/06/20 20:05:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, yun-yun, 35485, None)
+24/06/20 20:05:59 INFO BlockManagerMasterEndpoint: Registering block manager yun-yun:35485 with 366.3 MiB RAM, BlockManagerId(driver, yun-yun, 35485, None)
+24/06/20 20:05:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, yun-yun, 35485, None)
+24/06/20 20:05:59 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, yun-yun, 35485, None)
+24/06/20 20:05:59 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240620200559-0000/0 on worker-20240620200554-127.0.1.1-38273 (127.0.1.1:38273) with 1 core(s)
+24/06/20 20:05:59 INFO StandaloneSchedulerBackend: Granted executor ID app-20240620200559-0000/0 on hostPort 127.0.1.1:38273 with 1 core(s), 1024.0 MiB RAM
+24/06/20 20:05:59 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240620200559-0000/1 on worker-20240620200551-127.0.1.1-36611 (127.0.1.1:36611) with 1 core(s)
+24/06/20 20:05:59 INFO StandaloneSchedulerBackend: Granted executor ID app-20240620200559-0000/1 on hostPort 127.0.1.1:36611 with 1 core(s), 1024.0 MiB RAM
+24/06/20 20:05:59 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240620200559-0000/1 is now RUNNING
+24/06/20 20:05:59 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240620200559-0000/0 is now RUNNING
+24/06/20 20:05:59 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+24/06/20 20:05:59 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/06/20 20:05:59 INFO SharedState: Warehouse path is 'file:/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/spark-warehouse'.
+24/06/20 20:06:01 INFO InMemoryFileIndex: It took 38 ms to list leaf files for 1 paths.
+24/06/20 20:06:02 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (127.0.0.1:57770) with ID 0,  ResourceProfileId 0
+24/06/20 20:06:02 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (127.0.0.1:57774) with ID 1,  ResourceProfileId 0
+24/06/20 20:06:02 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.1.1:46289 with 366.3 MiB RAM, BlockManagerId(0, 127.0.1.1, 46289, None)
+24/06/20 20:06:02 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.1.1:38541 with 366.3 MiB RAM, BlockManagerId(1, 127.0.1.1, 38541, None)
+24/06/20 20:06:04 INFO FileSourceStrategy: Pushed Filters: 
+24/06/20 20:06:04 INFO FileSourceStrategy: Post-Scan Filters: 
+24/06/20 20:06:04 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 350.2 KiB, free 366.0 MiB)
+24/06/20 20:06:04 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 365.9 MiB)
+24/06/20 20:06:04 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on yun-yun:35485 (size: 34.4 KiB, free: 366.3 MiB)
+24/06/20 20:06:04 INFO SparkContext: Created broadcast 0 from javaRDD at App.java:100
+24/06/20 20:06:04 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+24/06/20 20:06:04 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 34.7 KiB, free 365.9 MiB)
+24/06/20 20:06:04 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.3 KiB, free 365.9 MiB)
+24/06/20 20:06:04 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on yun-yun:35485 (size: 2.3 KiB, free: 366.3 MiB)
+24/06/20 20:06:04 INFO SparkContext: Created broadcast 1 from broadcast at Classifier.java:26
+24/06/20 20:06:04 INFO SparkContext: Starting job: collect at Classifier.java:39
+24/06/20 20:06:04 INFO DAGScheduler: Got job 0 (collect at Classifier.java:39) with 13 output partitions
+24/06/20 20:06:04 INFO DAGScheduler: Final stage: ResultStage 0 (collect at Classifier.java:39)
+24/06/20 20:06:04 INFO DAGScheduler: Parents of final stage: List()
+24/06/20 20:06:04 INFO DAGScheduler: Missing parents: List()
+24/06/20 20:06:04 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[7] at filter at Classifier.java:38), which has no missing parents
+24/06/20 20:06:04 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 25.1 KiB, free 365.9 MiB)
+24/06/20 20:06:04 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 11.4 KiB, free 365.9 MiB)
+24/06/20 20:06:04 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on yun-yun:35485 (size: 11.4 KiB, free: 366.3 MiB)
+24/06/20 20:06:04 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+24/06/20 20:06:04 INFO DAGScheduler: Submitting 13 missing tasks from ResultStage 0 (MapPartitionsRDD[7] at filter at Classifier.java:38) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+24/06/20 20:06:04 INFO TaskSchedulerImpl: Adding task set 0.0 with 13 tasks resource profile 0
+24/06/20 20:06:04 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (127.0.1.1, executor 0, partition 0, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:06:04 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (127.0.1.1, executor 1, partition 1, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:06:04 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 127.0.1.1:38541 (size: 11.4 KiB, free: 366.3 MiB)
+24/06/20 20:06:04 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 127.0.1.1:46289 (size: 11.4 KiB, free: 366.3 MiB)
+24/06/20 20:06:07 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.1.1:38541 (size: 34.4 KiB, free: 366.3 MiB)
+24/06/20 20:06:07 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.1.1:46289 (size: 34.4 KiB, free: 366.3 MiB)
+24/06/20 20:06:07 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 127.0.1.1:38541 (size: 2.3 KiB, free: 366.3 MiB)
+24/06/20 20:06:07 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 127.0.1.1:46289 (size: 2.3 KiB, free: 366.3 MiB)
+24/06/20 20:06:49 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (127.0.1.1, executor 0, partition 2, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:06:49 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 45083 ms on 127.0.1.1 (executor 0) (1/13)
+24/06/20 20:06:53 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (127.0.1.1, executor 1, partition 3, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:06:53 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 49026 ms on 127.0.1.1 (executor 1) (2/13)
+24/06/20 20:07:37 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (127.0.1.1, executor 0, partition 4, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:07:37 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 47394 ms on 127.0.1.1 (executor 0) (3/13)
+24/06/20 20:07:44 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (127.0.1.1, executor 1, partition 5, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:07:44 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 51047 ms on 127.0.1.1 (executor 1) (4/13)
+24/06/20 20:08:26 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (127.0.1.1, executor 0, partition 6, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:08:26 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 49883 ms on 127.0.1.1 (executor 0) (5/13)
+24/06/20 20:08:35 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (127.0.1.1, executor 1, partition 7, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:08:35 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 50873 ms on 127.0.1.1 (executor 1) (6/13)
+24/06/20 20:09:16 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (127.0.1.1, executor 0, partition 8, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:09:16 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 49687 ms on 127.0.1.1 (executor 0) (7/13)
+24/06/20 20:09:28 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (127.0.1.1, executor 1, partition 9, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:09:28 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 53055 ms on 127.0.1.1 (executor 1) (8/13)
+24/06/20 20:10:08 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (127.0.1.1, executor 0, partition 10, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:10:08 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 52175 ms on 127.0.1.1 (executor 0) (9/13)
+24/06/20 20:10:22 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (127.0.1.1, executor 1, partition 11, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:10:22 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 53388 ms on 127.0.1.1 (executor 1) (10/13)
+24/06/20 20:11:01 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (127.0.1.1, executor 0, partition 12, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:11:01 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 52881 ms on 127.0.1.1 (executor 0) (11/13)
+24/06/20 20:11:16 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 54848 ms on 127.0.1.1 (executor 1) (12/13)
+24/06/20 20:11:27 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 25623 ms on 127.0.1.1 (executor 0) (13/13)
+24/06/20 20:11:27 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/06/20 20:11:27 INFO DAGScheduler: ResultStage 0 (collect at Classifier.java:39) finished in 322,729 s
+24/06/20 20:11:27 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/06/20 20:11:27 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/06/20 20:11:27 INFO DAGScheduler: Job 0 finished: collect at Classifier.java:39, took 322,780283 s
+24/06/20 20:11:27 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/06/20 20:11:27 INFO SparkUI: Stopped Spark web UI at http://yun-yun:4040
+24/06/20 20:11:27 INFO StandaloneSchedulerBackend: Shutting down all executors
+24/06/20 20:11:27 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down
+24/06/20 20:11:27 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/06/20 20:11:27 INFO MemoryStore: MemoryStore cleared
+24/06/20 20:11:27 INFO BlockManager: BlockManager stopped
+24/06/20 20:11:27 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/06/20 20:11:27 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/06/20 20:11:27 INFO SparkContext: Successfully stopped SparkContext
+24/06/20 20:11:27 INFO ShutdownHookManager: Shutdown hook called
+24/06/20 20:11:27 INFO ShutdownHookManager: Deleting directory /tmp/spark-f479254c-99a1-4356-8422-665a0bb6960d
+24/06/20 20:11:27 INFO ShutdownHookManager: Deleting directory /tmp/spark-ae75989d-c34b-44a0-af1c-0146fb3b9f60
+
+real    5m42,731s
+user    0m33,575s
+sys     0m2,625s
+
+
+
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/sbin/stop-master.sh
+stopping org.apache.spark.deploy.master.Master
+make[1]: se entra en el directorio '/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024'
+WARNING:        Si la variable SPARK_WORKER_INSTANCES fue editada antes de detener los workers
+                no se detendran todos, y spark perdera la referencia de los workers que estaban corriendo.
+                En caso que suceda lo segundo ejecute 'pkill -f org.apache.spark.deploy.worker.Worker' manualmente.
+
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/sbin/stop-worker.sh spark://yun-yun:7077
+stopping org.apache.spark.deploy.worker.Worker
+stopping org.apache.spark.deploy.worker.Worker
+make[1]: se sale del directorio '/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024'
+/home/yun/Documentos/3ro/Paradigmas/apache-maven-3.9.8/bin/mvn clean -q
+24/06/20 20:11:47 INFO SparkContext: Running Spark version 3.5.1
+24/06/20 20:11:47 INFO SparkContext: OS info Linux, 6.9.3-3-MANJARO, amd64
+24/06/20 20:11:47 INFO SparkContext: Java version 1.8.0_412
+24/06/20 20:11:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/06/20 20:11:47 INFO ResourceUtils: ==============================================================
+24/06/20 20:11:47 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/06/20 20:11:47 INFO ResourceUtils: ==============================================================
+24/06/20 20:11:47 INFO SparkContext: Submitted application: JavaCalculateNamedEntities
+24/06/20 20:11:47 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/06/20 20:11:47 INFO ResourceProfile: Limiting resource is cpu
+24/06/20 20:11:47 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/06/20 20:11:47 INFO SecurityManager: Changing view acls to: yun
+24/06/20 20:11:47 INFO SecurityManager: Changing modify acls to: yun
+24/06/20 20:11:47 INFO SecurityManager: Changing view acls groups to: 
+24/06/20 20:11:47 INFO SecurityManager: Changing modify acls groups to: 
+24/06/20 20:11:47 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: yun; groups with view permissions: EMPTY; users with modify permissions: yun; groups with modify permissions: EMPTY
+24/06/20 20:11:47 INFO Utils: Successfully started service 'sparkDriver' on port 35957.
+24/06/20 20:11:47 INFO SparkEnv: Registering MapOutputTracker
+24/06/20 20:11:47 INFO SparkEnv: Registering BlockManagerMaster
+24/06/20 20:11:47 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/06/20 20:11:47 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/06/20 20:11:47 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/06/20 20:11:47 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-27da91ec-78ea-4590-b9ad-034de5ab0757
+24/06/20 20:11:47 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+24/06/20 20:11:47 INFO SparkEnv: Registering OutputCommitCoordinator
+24/06/20 20:11:48 INFO JettyUtils: Start Jetty 127.0.1.1:4040 for SparkUI
+24/06/20 20:11:48 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/06/20 20:11:48 INFO SparkContext: Added JAR file:/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/target/mi-proyecto-1.0.0.jar at spark://yun-yun:35957/jars/mi-proyecto-1.0.0.jar with timestamp 1718925107491
+24/06/20 20:11:48 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://127.0.1.1:7077...
+24/06/20 20:11:48 INFO TransportClientFactory: Successfully created connection to /127.0.1.1:7077 after 29 ms (0 ms spent in bootstraps)
+24/06/20 20:11:48 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20240620201148-0000
+24/06/20 20:11:48 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46095.
+24/06/20 20:11:48 INFO NettyBlockTransferService: Server created on yun-yun:46095
+24/06/20 20:11:48 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/06/20 20:11:48 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240620201148-0000/0 on worker-20240620201136-127.0.1.1-40525 (127.0.1.1:40525) with 1 core(s)
+24/06/20 20:11:48 INFO StandaloneSchedulerBackend: Granted executor ID app-20240620201148-0000/0 on hostPort 127.0.1.1:40525 with 1 core(s), 1024.0 MiB RAM
+24/06/20 20:11:48 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240620201148-0000/1 on worker-20240620201138-127.0.1.1-46589 (127.0.1.1:46589) with 1 core(s)
+24/06/20 20:11:48 INFO StandaloneSchedulerBackend: Granted executor ID app-20240620201148-0000/1 on hostPort 127.0.1.1:46589 with 1 core(s), 1024.0 MiB RAM
+24/06/20 20:11:48 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240620201148-0000/2 on worker-20240620201141-127.0.1.1-36859 (127.0.1.1:36859) with 1 core(s)
+24/06/20 20:11:48 INFO StandaloneSchedulerBackend: Granted executor ID app-20240620201148-0000/2 on hostPort 127.0.1.1:36859 with 1 core(s), 1024.0 MiB RAM
+24/06/20 20:11:48 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240620201148-0000/3 on worker-20240620201143-127.0.1.1-34679 (127.0.1.1:34679) with 1 core(s)
+24/06/20 20:11:48 INFO StandaloneSchedulerBackend: Granted executor ID app-20240620201148-0000/3 on hostPort 127.0.1.1:34679 with 1 core(s), 1024.0 MiB RAM
+24/06/20 20:11:48 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, yun-yun, 46095, None)
+24/06/20 20:11:48 INFO BlockManagerMasterEndpoint: Registering block manager yun-yun:46095 with 366.3 MiB RAM, BlockManagerId(driver, yun-yun, 46095, None)
+24/06/20 20:11:48 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, yun-yun, 46095, None)
+24/06/20 20:11:48 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, yun-yun, 46095, None)
+24/06/20 20:11:48 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240620201148-0000/0 is now RUNNING
+24/06/20 20:11:48 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240620201148-0000/1 is now RUNNING
+24/06/20 20:11:48 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240620201148-0000/2 is now RUNNING
+24/06/20 20:11:48 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240620201148-0000/3 is now RUNNING
+24/06/20 20:11:48 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+24/06/20 20:11:49 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/06/20 20:11:49 INFO SharedState: Warehouse path is 'file:/home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/spark-warehouse'.
+24/06/20 20:11:51 INFO InMemoryFileIndex: It took 66 ms to list leaf files for 1 paths.
+24/06/20 20:11:53 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (127.0.0.1:38932) with ID 3,  ResourceProfileId 0
+24/06/20 20:11:53 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (127.0.0.1:38944) with ID 0,  ResourceProfileId 0
+24/06/20 20:11:53 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (127.0.0.1:38956) with ID 1,  ResourceProfileId 0
+24/06/20 20:11:53 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (127.0.0.1:38968) with ID 2,  ResourceProfileId 0
+24/06/20 20:11:53 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.1.1:41821 with 366.3 MiB RAM, BlockManagerId(1, 127.0.1.1, 41821, None)
+24/06/20 20:11:53 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.1.1:39703 with 366.3 MiB RAM, BlockManagerId(3, 127.0.1.1, 39703, None)
+24/06/20 20:11:53 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.1.1:41823 with 366.3 MiB RAM, BlockManagerId(0, 127.0.1.1, 41823, None)
+24/06/20 20:11:53 INFO BlockManagerMasterEndpoint: Registering block manager 127.0.1.1:42511 with 366.3 MiB RAM, BlockManagerId(2, 127.0.1.1, 42511, None)
+24/06/20 20:11:55 INFO FileSourceStrategy: Pushed Filters: 
+24/06/20 20:11:55 INFO FileSourceStrategy: Post-Scan Filters: 
+24/06/20 20:11:55 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 350.2 KiB, free 366.0 MiB)
+24/06/20 20:11:55 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 365.9 MiB)
+24/06/20 20:11:55 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on yun-yun:46095 (size: 34.4 KiB, free: 366.3 MiB)
+24/06/20 20:11:55 INFO SparkContext: Created broadcast 0 from javaRDD at App.java:100
+24/06/20 20:11:55 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+24/06/20 20:11:56 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 34.7 KiB, free 365.9 MiB)
+24/06/20 20:11:56 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.3 KiB, free 365.9 MiB)
+24/06/20 20:11:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on yun-yun:46095 (size: 2.3 KiB, free: 366.3 MiB)
+24/06/20 20:11:56 INFO SparkContext: Created broadcast 1 from broadcast at Classifier.java:26
+24/06/20 20:11:56 INFO SparkContext: Starting job: collect at Classifier.java:39
+24/06/20 20:11:56 INFO DAGScheduler: Got job 0 (collect at Classifier.java:39) with 13 output partitions
+24/06/20 20:11:56 INFO DAGScheduler: Final stage: ResultStage 0 (collect at Classifier.java:39)
+24/06/20 20:11:56 INFO DAGScheduler: Parents of final stage: List()
+24/06/20 20:11:56 INFO DAGScheduler: Missing parents: List()
+24/06/20 20:11:56 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[7] at filter at Classifier.java:38), which has no missing parents
+24/06/20 20:11:56 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 25.1 KiB, free 365.9 MiB)
+24/06/20 20:11:56 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 11.4 KiB, free 365.9 MiB)
+24/06/20 20:11:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on yun-yun:46095 (size: 11.4 KiB, free: 366.3 MiB)
+24/06/20 20:11:56 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+24/06/20 20:11:56 INFO DAGScheduler: Submitting 13 missing tasks from ResultStage 0 (MapPartitionsRDD[7] at filter at Classifier.java:38) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+24/06/20 20:11:56 INFO TaskSchedulerImpl: Adding task set 0.0 with 13 tasks resource profile 0
+24/06/20 20:11:56 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (127.0.1.1, executor 3, partition 0, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:11:56 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (127.0.1.1, executor 0, partition 1, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:11:56 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (127.0.1.1, executor 1, partition 2, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:11:56 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (127.0.1.1, executor 2, partition 3, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:11:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 127.0.1.1:41821 (size: 11.4 KiB, free: 366.3 MiB)
+24/06/20 20:11:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 127.0.1.1:39703 (size: 11.4 KiB, free: 366.3 MiB)
+24/06/20 20:11:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 127.0.1.1:41823 (size: 11.4 KiB, free: 366.3 MiB)
+24/06/20 20:11:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 127.0.1.1:42511 (size: 11.4 KiB, free: 366.3 MiB)
+24/06/20 20:12:01 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.1.1:41821 (size: 34.4 KiB, free: 366.3 MiB)
+24/06/20 20:12:01 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.1.1:39703 (size: 34.4 KiB, free: 366.3 MiB)
+24/06/20 20:12:01 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 127.0.1.1:41821 (size: 2.3 KiB, free: 366.3 MiB)
+24/06/20 20:12:01 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.1.1:42511 (size: 34.4 KiB, free: 366.3 MiB)
+24/06/20 20:12:01 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 127.0.1.1:39703 (size: 2.3 KiB, free: 366.3 MiB)
+24/06/20 20:12:01 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 127.0.1.1:41823 (size: 34.4 KiB, free: 366.3 MiB)
+24/06/20 20:12:01 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 127.0.1.1:42511 (size: 2.3 KiB, free: 366.3 MiB)
+24/06/20 20:12:02 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 127.0.1.1:41823 (size: 2.3 KiB, free: 366.3 MiB)
+24/06/20 20:13:26 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (127.0.1.1, executor 3, partition 4, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:13:26 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 90051 ms on 127.0.1.1 (executor 3) (1/13)
+24/06/20 20:13:32 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (127.0.1.1, executor 0, partition 5, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:13:32 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 96563 ms on 127.0.1.1 (executor 0) (2/13)
+24/06/20 20:13:34 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (127.0.1.1, executor 2, partition 6, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:13:34 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 97848 ms on 127.0.1.1 (executor 2) (3/13)
+24/06/20 20:13:34 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (127.0.1.1, executor 1, partition 7, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:13:34 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 98170 ms on 127.0.1.1 (executor 1) (4/13)
+24/06/20 20:15:01 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (127.0.1.1, executor 3, partition 8, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:15:01 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 95502 ms on 127.0.1.1 (executor 3) (5/13)
+24/06/20 20:15:07 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (127.0.1.1, executor 2, partition 9, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:15:07 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 93151 ms on 127.0.1.1 (executor 2) (6/13)
+24/06/20 20:15:08 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (127.0.1.1, executor 0, partition 10, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:15:08 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 95442 ms on 127.0.1.1 (executor 0) (7/13)
+24/06/20 20:15:11 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (127.0.1.1, executor 1, partition 11, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:15:11 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 97313 ms on 127.0.1.1 (executor 1) (8/13)
+24/06/20 20:16:42 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (127.0.1.1, executor 3, partition 12, PROCESS_LOCAL, 8459 bytes) 
+24/06/20 20:16:42 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 100766 ms on 127.0.1.1 (executor 3) (9/13)
+24/06/20 20:16:44 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 97648 ms on 127.0.1.1 (executor 2) (10/13)
+24/06/20 20:16:48 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 96900 ms on 127.0.1.1 (executor 1) (11/13)
+24/06/20 20:16:49 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 100793 ms on 127.0.1.1 (executor 0) (12/13)
+24/06/20 20:17:07 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 24906 ms on 127.0.1.1 (executor 3) (13/13)
+24/06/20 20:17:07 INFO DAGScheduler: ResultStage 0 (collect at Classifier.java:39) finished in 311,221 s
+24/06/20 20:17:07 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/06/20 20:17:07 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/06/20 20:17:07 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/06/20 20:17:07 INFO DAGScheduler: Job 0 finished: collect at Classifier.java:39, took 311,280385 s
+24/06/20 20:17:07 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/06/20 20:17:07 INFO SparkUI: Stopped Spark web UI at http://yun-yun:4040
+24/06/20 20:17:07 INFO StandaloneSchedulerBackend: Shutting down all executors
+24/06/20 20:17:07 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down
+24/06/20 20:17:07 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/06/20 20:17:07 INFO MemoryStore: MemoryStore cleared
+24/06/20 20:17:07 INFO BlockManager: BlockManager stopped
+24/06/20 20:17:07 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/06/20 20:17:07 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/06/20 20:17:07 INFO SparkContext: Successfully stopped SparkContext
+24/06/20 20:17:07 INFO ShutdownHookManager: Shutdown hook called
+24/06/20 20:17:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-27d57e03-0f10-477c-9798-aa0310aa1784
+24/06/20 20:17:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-d35ae3cf-742a-473b-abd6-3c5cdcef8fa5
+
+real    5m38,915s
+user    0m41,711s
+sys     0m2,791s
+Finished

@@ -1,0 +1,349 @@
+Compilando proyecto
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.ejemplo:mi-proyecto >-----------------------
+[INFO] Building mi-proyecto 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ mi-proyecto ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mi-proyecto ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mi-proyecto ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 20 source files with javac [debug target 1.8] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mi-proyecto ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mi-proyecto ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ mi-proyecto ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.2.0:jar (default-jar) @ mi-proyecto ---
+[INFO] Building jar: /home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/target/mi-proyecto-1.0.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.914 s
+[INFO] Finished at: 2024-06-20T19:57:48-03:00
+[INFO] ------------------------------------------------------------------------
+echo "SPARK_LOCAL_IP=127.0.1.1" > /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/conf/spark-env.sh
+starting org.apache.spark.deploy.master.Master, logging to /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/logs/spark-yun-org.apache.spark.deploy.master.Master-1-yun-yun.out
+Master is now running
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/sbin/start-worker.sh spark://yun-yun:7077 -c 1 -m 1G
+starting org.apache.spark.deploy.worker.Worker, logging to /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/logs/spark-yun-org.apache.spark.deploy.worker.Worker-1-yun-yun.out
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/bin/spark-submit --master spark://yun-yun:7077 --class App ./target/mi-proyecto-1.0.0.jar -ne cw
+Computing named entities using cw
+CATEGORY: LOCATION
+    Argentina (34037)
+    SantaFe (6557)
+    SanJuan (13135)
+    United States (275)
+    Rosario (7421)
+    Malvinas (1794)
+    Chaco (2118)
+    Jujuy (1533)
+    LaPampa (696)
+    SanLuis (3884)
+    Neuquen (1080)
+    Russia (84)
+    Cordoba (15262)
+    Salta (2932)
+    China (18909)
+    Brazil (67)
+    SantaCruz (8944)
+    Buenos Aires (31888)
+    Tucuman (3998)
+    Mendoza (6466)
+CATEGORY: ORGANIZATION
+    RiverPlate (1877)
+    Google (1438)
+    Belgrano (2391)
+    Shell (446)
+    Apple (2521)
+    Talleres (916)
+    BocaJuniors (2029)
+    MercadoLibre (6)
+    Instituto (10636)
+    CorteSuprema (3364)
+CATEGORY: OTHER
+    Covid (335)
+    Dengue (17)
+CATEGORY: PERSON
+    Federer (720)
+    Espert (3)
+    Fernandez (1908)
+    Ronaldo (370)
+    Musk (47)
+    Galperin (2)
+    Larreta (17)
+    Putin (610)
+    Bezos (23)
+    Macri (906)
+    Cristina (1041)
+    Jobs (389)
+    Biden (163)
+    Hamilton (1703)
+    DuaLipa (12)
+    Nadal (942)
+    Taylor (1694)
+    Djokovic (511)
+    Lebron (38)
+    Llaryora (2)
+    Kicillof (3)
+    Schiaretti (14)
+    Trump (1075)
+    Lali (10)
+    Tini (7)
+    Milei (123)
+    Messi (316)
+    Ariana (39)
+    Gates (393)
+CATEGORY: EVENT
+    CopaSudamericana (1981)
+    CopaLibertadores (4947)
+    CopaAmerica (2688)
+
+- - - -
+
+Compilando proyecto
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.ejemplo:mi-proyecto >-----------------------
+[INFO] Building mi-proyecto 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ mi-proyecto ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mi-proyecto ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mi-proyecto ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 20 source files with javac [debug target 1.8] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mi-proyecto ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mi-proyecto ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ mi-proyecto ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.2.0:jar (default-jar) @ mi-proyecto ---
+[INFO] Building jar: /home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/target/mi-proyecto-1.0.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.436 s
+[INFO] Finished at: 2024-06-20T20:05:48-03:00
+[INFO] ------------------------------------------------------------------------
+echo "SPARK_LOCAL_IP=127.0.1.1" > /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/conf/spark-env.sh
+starting org.apache.spark.deploy.master.Master, logging to /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/logs/spark-yun-org.apache.spark.deploy.master.Master-1-yun-yun.out
+Master is now running
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/sbin/start-worker.sh spark://yun-yun:7077 -c 1 -m 1G
+starting org.apache.spark.deploy.worker.Worker, logging to /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/logs/spark-yun-org.apache.spark.deploy.worker.Worker-1-yun-yun.out
+starting org.apache.spark.deploy.worker.Worker, logging to /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/logs/spark-yun-org.apache.spark.deploy.worker.Worker-2-yun-yun.out
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/bin/spark-submit --master spark://yun-yun:7077 --class App ./target/mi-proyecto-1.0.0.jar -ne cw
+Computing named entities using cw
+CATEGORY: LOCATION
+    Argentina (34037)
+    SantaFe (6557)
+    SanJuan (13135)
+    United States (275)
+    Rosario (7421)
+    Malvinas (1794)
+    Chaco (2118)
+    Jujuy (1533)
+    LaPampa (696)
+    SanLuis (3884)
+    Neuquen (1080)
+    Russia (84)
+    Cordoba (15262)
+    Salta (2932)
+    China (18909)
+    Brazil (67)
+    SantaCruz (8944)
+    Buenos Aires (31888)
+    Tucuman (3998)
+    Mendoza (6466)
+CATEGORY: ORGANIZATION
+    RiverPlate (1877)
+    Google (1438)
+    Belgrano (2391)
+    Shell (446)
+    Apple (2521)
+    Talleres (916)
+    BocaJuniors (2029)
+    MercadoLibre (6)
+    Instituto (10636)
+    CorteSuprema (3364)
+CATEGORY: OTHER
+    Covid (335)
+    Dengue (17)
+CATEGORY: PERSON
+    Federer (720)
+    Espert (3)
+    Fernandez (1908)
+    Ronaldo (370)
+    Musk (47)
+    Galperin (2)
+    Larreta (17)
+    Putin (610)
+    Bezos (23)
+    Macri (906)
+    Cristina (1041)
+    Jobs (389)
+    Biden (163)
+    Hamilton (1703)
+    DuaLipa (12)
+    Nadal (942)
+    Taylor (1694)
+    Djokovic (511)
+    Lebron (38)
+    Llaryora (2)
+    Kicillof (3)
+    Schiaretti (14)
+    Trump (1075)
+    Lali (10)
+    Tini (7)
+    Milei (123)
+    Messi (316)
+    Ariana (39)
+    Gates (393)
+CATEGORY: EVENT
+    CopaSudamericana (1981)
+    CopaLibertadores (4947)
+    CopaAmerica (2688)
+
+- - - -
+
+Compilando proyecto
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.ejemplo:mi-proyecto >-----------------------
+[INFO] Building mi-proyecto 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ mi-proyecto ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mi-proyecto ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ mi-proyecto ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 20 source files with javac [debug target 1.8] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mi-proyecto ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ mi-proyecto ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ mi-proyecto ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.2.0:jar (default-jar) @ mi-proyecto ---
+[INFO] Building jar: /home/yun/Documentos/3ro/Paradigmas/grupo25_lab03_2024/target/mi-proyecto-1.0.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.313 s
+[INFO] Finished at: 2024-06-20T20:11:31-03:00
+[INFO] ------------------------------------------------------------------------
+echo "SPARK_LOCAL_IP=127.0.1.1" > /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/conf/spark-env.sh
+starting org.apache.spark.deploy.master.Master, logging to /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/logs/spark-yun-org.apache.spark.deploy.master.Master-1-yun-yun.out
+Master is now running
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/sbin/start-worker.sh spark://yun-yun:7077 -c 1 -m 1G
+starting org.apache.spark.deploy.worker.Worker, logging to /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/logs/spark-yun-org.apache.spark.deploy.worker.Worker-1-yun-yun.out
+starting org.apache.spark.deploy.worker.Worker, logging to /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/logs/spark-yun-org.apache.spark.deploy.worker.Worker-2-yun-yun.out
+starting org.apache.spark.deploy.worker.Worker, logging to /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/logs/spark-yun-org.apache.spark.deploy.worker.Worker-3-yun-yun.out
+starting org.apache.spark.deploy.worker.Worker, logging to /home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/logs/spark-yun-org.apache.spark.deploy.worker.Worker-4-yun-yun.out
+/home/yun/Documentos/3ro/Paradigmas/spark-3.5.1-bin-hadoop3/bin/spark-submit --master spark://yun-yun:7077 --class App ./target/mi-proyecto-1.0.0.jar -ne cw
+Computing named entities using cw
+CATEGORY: LOCATION
+    Argentina (34037)
+    SantaFe (6557)
+    SanJuan (13135)
+    United States (275)
+    Rosario (7421)
+    Malvinas (1794)
+    Chaco (2118)
+    Jujuy (1533)
+    LaPampa (696)
+    SanLuis (3884)
+    Neuquen (1080)
+    Russia (84)
+    Cordoba (15262)
+    Salta (2932)
+    China (18909)
+    Brazil (67)
+    SantaCruz (8944)
+    Buenos Aires (31888)
+    Tucuman (3998)
+    Mendoza (6466)
+CATEGORY: ORGANIZATION
+    RiverPlate (1877)
+    Google (1438)
+    Belgrano (2391)
+    Shell (446)
+    Apple (2521)
+    Talleres (916)
+    BocaJuniors (2029)
+    MercadoLibre (6)
+    Instituto (10636)
+    CorteSuprema (3364)
+CATEGORY: OTHER
+    Covid (335)
+    Dengue (17)
+CATEGORY: PERSON
+    Federer (720)
+    Espert (3)
+    Fernandez (1908)
+    Ronaldo (370)
+    Musk (47)
+    Galperin (2)
+    Larreta (17)
+    Putin (610)
+    Bezos (23)
+    Macri (906)
+    Cristina (1041)
+    Jobs (389)
+    Biden (163)
+    Hamilton (1703)
+    DuaLipa (12)
+    Nadal (942)
+    Taylor (1694)
+    Djokovic (511)
+    Lebron (38)
+    Llaryora (2)
+    Kicillof (3)
+    Schiaretti (14)
+    Trump (1075)
+    Lali (10)
+    Tini (7)
+    Milei (123)
+    Messi (316)
+    Ariana (39)
+    Gates (393)
+CATEGORY: EVENT
+    CopaSudamericana (1981)
+    CopaLibertadores (4947)
+    CopaAmerica (2688)

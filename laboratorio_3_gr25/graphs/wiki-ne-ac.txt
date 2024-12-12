@@ -1,0 +1,12 @@
+CATEGORY: ORGANIZATION
+    LLA (21)
+    FIT (31)
+    CGT (1073)
+    CTA (148)
+    ATE (85)
+    FMI (826)
+    INDEC (620)
+    UCR (1289)
+    SMN (46)
+    FDT (4)
+    YPF (510)
